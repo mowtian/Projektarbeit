@@ -20,8 +20,8 @@ rosbag play recorded1.bag recorded2.bag
 rosbag play --clock recorded1.bag   
 rosbag play --clock --hz=200 recorded1.bag    
 rosbag play -d 5 recorded1.bag    
-rostopic echo -b <BAGFILE> -p /<TOPIC> > <output>.csv     
-rostopic echo -b <BAGFILE> -p /<TOPIC> > <output>.txt     
+rostopic echo -b <BAGFILE>.bag -p /<TOPIC> > <output>.csv     
+rostopic echo -b <BAGFILE>.bag -p /<TOPIC> > <output>.txt     
 ```
 
 > ## backup
