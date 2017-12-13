@@ -11,9 +11,11 @@
 > sudo chmod 666 /dev/ttyUSB0   
 > sudo usermod -aG dialout pc-241  
 > ```
+
 > ```js
 > roslaunch sweep-ros-master sweep2scan.launch   
 > ```
+
 > ```js
 > rosbag record -a   
 > rosbag play recorded1.bag recorded2.bag    
@@ -30,6 +32,7 @@
 > cd /    
 > tar cvpzf backup.tgz --exclude=/proc --exclude=/lost+found --exclude=/backup.tgz --exclude=/mnt --exclude=/sys --exclude=/media /   
 > ```
+
 > ```js
 > sudo tar xvpfz backup.tgz      
 > sudo mkdir proc lost+found mnt sys media           
