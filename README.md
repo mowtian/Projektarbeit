@@ -1,11 +1,11 @@
 # Projektarbeit
-## zed camera
+> ## zed camera
 ```js
 catkin_make   
 source ./devel/setup.bash
 ```
 
-## Scanse
+> ## Scanse
 ```js
 ll /dev/ttyUSB0   
 sudo chmod 666 /dev/ttyUSB0   
@@ -21,10 +21,10 @@ rosbag play --clock recorded1.bag
 rosbag play --clock --hz=200 recorded1.bag    
 rosbag play -d 5 recorded1.bag    
 rostopic echo -b <BAGFILE> -p <TOPIC> > <output>.csv     
-`oder` rostopic echo -b <BAGFILE> -p <TOPIC> > <output>.txt     
+rostopic echo -b <BAGFILE> -p <TOPIC> > <output>.txt     
 ```
 
-## backup
+> ## backup
 ```js
 sudo su    
 cd /    
