@@ -15,7 +15,7 @@
 > ```
 
 > ```js
-> roslaunch sweep-ros-master sweep2scan.launch   
+> roslaunch sweep_ros sweep2scan.launch   
 > ```
 
 > ```js
