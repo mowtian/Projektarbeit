@@ -22,8 +22,14 @@
 > rosbag play --clock recorded1.bag   
 > rosbag play --clock --hz=200 recorded1.bag    
 > rosbag play -d 5 recorded1.bag    
-> rostopic echo -b <BAGFILE>.bag -p /<TOPIC> > <output>.csv     
-> rostopic echo -b <BAGFILE>.bag -p /<TOPIC> > <output>.txt     
+> rostopic echo -b <BAGFILE>.bag -p /LaserScan > <output>.csv     
+> rostopic echo -b <BAGFILE>.bag -p /LaserScan > <output>.txt     
+> ```
+
+> ## Gmapping
+> ```js
+> rosrun gmapping slam_gmapping scan:=LaserScan    
+> rosrun map_server map_saver -f mymap    
 > ```
 
 > ## backup
