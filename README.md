@@ -2,7 +2,9 @@
 > ## zed camera
 > ```js
 > catkin_make   
-> source ./devel/setup.bash
+> source ./devel/setup.bash    
+> roslaunch zed_wrapper zed.launch
+> roslaunch zed_wrapper display.launch   
 > ```
 
 > ## Scanse
