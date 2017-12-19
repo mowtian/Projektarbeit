@@ -1,5 +1,5 @@
 roscore
 rosparam set use_sim_time true 
-rosrun gmapping slam_gmapping_pr2.launch
+roslaunch gmapping slam_gmapping_pr2.launch
 rosbag play -d 10 --clock recorded1.bag
 rosrun rviz rviz
