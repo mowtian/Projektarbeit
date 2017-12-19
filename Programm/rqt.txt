@@ -1,0 +1,4 @@
+sudo apt-get install ros-kinetic-rqt
+sudo apt-get install ros-kinetic-rqt-common-plugins
+rqt_graph
+rosrun rqt_plot  rqt_plot
