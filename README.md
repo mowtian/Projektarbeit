@@ -30,7 +30,7 @@
 
 > ## Gmapping
 > ```js
-> rosrun gmapping slam_gmapping_pr2.launch    
+> roslaunch gmapping slam_gmapping_pr2.launch    
 > rosrun map_server map_saver -f mymap    
 > ```
 
