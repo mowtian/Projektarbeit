@@ -1,0 +1,13 @@
+<!--
+  Used for visualising turtlebot in action.  
+  
+  It requires minimal.launch and optionally 3dsensor.launch to already be up and running.
+ -->
+<launch>
+  <node pkg="tf" type="static_transform_publisher" name="wheel_right_link_to_base_footprint" args="0 0 0 0 0 0  /base_footprint /wheel_right_link 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="wheel_left_link_to_base_footprint" args="0 0 0 0 0 0  /base_footprint /wheel_left_link 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="base_footprint_to_base_link" args="0 0 0 0 0 0  /base_link /base_footprint 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="base_link_to_odom" args="0 0 0 0 0 0  /odom /base_link 100"/>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot_rviz_launchers)/rviz/robot.rviz" />
+</launch>

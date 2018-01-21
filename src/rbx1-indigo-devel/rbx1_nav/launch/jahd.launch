@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<launch>
+
+  <param name="use_sim_time" value="false" />
+  
+  <!-- create Robot --> 
+  <include file="$(find rbx1_bringup)/launch/turtlebot_minimal_create.launch" />
+
+  <!-- tf -->
+  <node pkg="tf" type="static_transform_publisher" name="base_footprint_to_base_link" args="0 0 0 0 0 0 /base_link /base_footprint 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="left_wheel_link_to_base_footprint" args="0 0 0 0 0 0 /base_footprint /left_wheel_link 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="right_wheel_link_to_base_footprint" args="0 0 0 0 0 0 /base_footprint /right_wheel_link 100"/>
+
+  <!-- Fire up the laser scanner -->
+  <include file="$(find sweep_ros)/launch/sweep2scan.launch" />
+  
+  <!-- EDIT THIS LINE TO REFLECT THE NAME OF YOUR OWN MAP FILE 
+       Can also be overridden on the command line -->
+  <arg name="map" default="Gute_Aufnahme.yaml" />
+
+  <!-- Run the map server with the desired map -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find rbx1_nav)/maps/$(arg map)"/>
+
+  <!-- Start move_base  -->
+  <include file="$(find rbx1_nav)/launch/tb_move_base.launch" />
+
+  <!-- Fire up AMCL -->
+  <include file="$(find rbx1_nav)/launch/tb_amcl.launch" />
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rbx1_nav)/nav_test.rviz"/>
+  
+</launch>

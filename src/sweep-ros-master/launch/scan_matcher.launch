@@ -1,0 +1,11 @@
+<launch>  
+
+
+<node pkg="laser_scan_matcher" type="laser_scan_matcher_node"
+    name="laser_scan_matcher_node" output="screen">
+
+    <param name="max_iterations" value="10"/>
+    <param name="fixed_frame" value="odom"/>
+  </node>
+
+</launch>

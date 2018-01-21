@@ -1,0 +1,6 @@
+<launch>
+
+<node pkg="tf" type="static_transform_publisher" name="camera_to_base" args="0 0 0 0 0 4 /base_link /stereo_camera/left_camera_optical_frame 100" />
+
+-$(arg pi/2)
+</launch>

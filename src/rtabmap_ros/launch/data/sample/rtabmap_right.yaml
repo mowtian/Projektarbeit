@@ -1,0 +1,21 @@
+%YAML:1.0
+---
+camera_name: rtabmap_right
+image_width: 1024
+image_height: 1024
+camera_matrix:
+   rows: 3
+   cols: 3
+   data: [ 5.5676879882812500e+02, 0., 5.1450000000000000e+02,
+       -1.1666863310611006e+02, 0., 5.5676879882812500e+02, 502., 0., 0. ]
+distortion_coefficients:
+   rows: 1
+   cols: 5
+   data: [ 0., 0., 0., 0., 0. ]
+distortion_model: plumb_bob
+projection_matrix:
+   rows: 3
+   cols: 4
+   data: [ 5.5676879882812500e+02, 0., 5.1450000000000000e+02,
+       -1.1666863310611006e+02, 0., 5.5676879882812500e+02, 502., 0., 0.,
+       0., 1., 0. ]
